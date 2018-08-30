@@ -6,9 +6,10 @@ import {RouterModule, Routes} from '@angular/router';
 import {LoginActivateService} from '../services/login-activate.service';
 
 const routes: Routes = [
-  {path: '', redirectTo: 's3/', pathMatch: 'full'},
+  // {path: '', redirectTo: 's3/', pathMatch: 'full'},
   // {path: 'login', component: LoginComponent},
-  {path: 's3/', component: MainPageComponent, canActivate: [LoginActivateService]}
+  {path: ':path', component: MainPageComponent, canActivate: [LoginActivateService]},
+  // {path: '', component: MainPageComponent, canActivate: [LoginActivateService]}
 ];
 
 @NgModule({
