@@ -3,6 +3,8 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {UiModule} from './ui/ui.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FormsModule} from '@angular/forms';
 
 // const routes: Routes = [
 //   {path: '', redirectTo: 's3/', pathMatch: 'full'},
@@ -15,7 +17,7 @@ import {UiModule} from './ui/ui.module';
     AppComponent
   ],
   imports: [
-    BrowserModule, UiModule
+    BrowserModule, UiModule, BrowserAnimationsModule, FormsModule
     // BrowserModule, UiModule, RouterModule.forRoot(routes)
   ],
   providers: [],

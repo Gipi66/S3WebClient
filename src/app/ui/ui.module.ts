@@ -5,6 +5,8 @@ import {LoginComponent} from './login/login.component';
 import {RouterModule, Routes} from '@angular/router';
 import {LoginActivateService} from '../services/login-activate.service';
 import {LayoutComponent} from './layout/layout.component';
+import {MatButtonModule, MatFormFieldModule, MatInputModule, MatSelectModule} from '@angular/material';
+import {FormsModule} from '@angular/forms';
 
 // const routes: Routes = [
 //   // {path: '', redirectTo: 's3/', pathMatch: 'full'},
@@ -24,7 +26,12 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),
     // RouterModule.forRoot(routes),
-    CommonModule
+    CommonModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    MatButtonModule
   ],
   declarations: [MainPageComponent, LoginComponent, LayoutComponent],
   exports: [RouterModule, MainPageComponent, LoginComponent, LayoutComponent]

@@ -1,20 +1,20 @@
 export class AuthToken {
-  private _accessKey: String;
-  private _secretKey: String;
+  private _accessKey: string;
+  private _secretKey: string;
 
-  get accessKey(): String {
+  get accessKey(): string {
     return this._accessKey;
   }
 
-  set accessKey(value: String) {
+  set accessKey(value: string) {
     this._accessKey = value;
   }
 
-  get secretKey(): String {
+  get secretKey(): string {
     return this._secretKey;
   }
 
-  set secretKey(value: String) {
+  set secretKey(value: string) {
     this._secretKey = value;
   }
 }
