@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-main-page',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor() { }
+  private paramPath: string;
+
+  constructor(private route: ActivatedRoute) {
+    this.paramPath = route.snapshot.params['path'];
+    console.log(this.paramPath);
+  }
 
   ngOnInit() {
   }

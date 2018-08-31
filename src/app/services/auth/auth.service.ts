@@ -33,7 +33,7 @@ export class AuthService {
   public isExistAuthToken(): boolean {
     let result = false;
     const token = this.getAuthToken();
-    if (token.accessKey.trim() !== '' && token.secretKey.trim() !== '') {
+    if (token != null && token.accessKey.trim() !== '' && token.secretKey.trim() !== '') {
       result = true;
     }
     return result;

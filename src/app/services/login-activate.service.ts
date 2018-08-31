@@ -13,7 +13,7 @@ export class LoginActivateService implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     if (!this.authService.isExistAuthToken()) {
-      this.router.navigate(['loogin']);
+      this.router.navigate(['login']);
     }
     return true;
   }
