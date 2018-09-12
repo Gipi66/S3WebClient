@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {AuthToken} from '../../models/AuthToken';
 import {S3AuthService} from '../../services/s3-auth.service';
-import * as S3 from 'aws-sdk/clients/s3';
+// import * as S3 from 'aws-sdk/clients/s3';
 // import * from '../../aws-sdk/clients/s3';
 
 @Component({
@@ -25,11 +25,6 @@ export class LoginComponent implements OnInit {
   save() {
     console.log('save()');
     // s3AuthService.
-    const client = new S3();
-    const config = client.config;
-    config.secretAccessKey = this.authToken.secretKey;
-    config.accessKeyId = this.authToken.accessKey;
-    client.config = config;
     //
     //
     // client.listObjects(function (err, data) {

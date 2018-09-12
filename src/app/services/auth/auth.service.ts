@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {AuthToken} from '../../models/AuthToken';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -28,6 +29,10 @@ export class AuthService {
 
   public clearAuthToken(): void {
     localStorage.removeItem(this.authTokenKey);
+  }
+
+  public login(): Observable<string> {
+    return Observable.create("");
   }
 
   public isExistAuthToken(): boolean {
